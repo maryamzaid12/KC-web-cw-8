@@ -6,24 +6,34 @@ let A_grades_div = document.getElementById("A-grades");
 let bonus_grades_div = document.getElementById("bonus-grades");
 let random_grade_div = document.getElementById("random-grade");
 // لا تقم بتغيير او تخريب الكود الموجود فوق هذا الكومنت
-
-// طبّق الخطوة 4 في أسفل هذا الكومنت
-
-// طبّق الخطوة 5 في أسفل هذا الكومنت
-
-// طبّق الخطوة 6 أسفل هذا الكومنت
-
-
-
-function search() {
+ 
+  grades.pop(13)
+ // طبّق الخطوة 5 في أسفل هذا الكومنت
+  grades.push(99)
+ 
+  // طبّق الخطوة 6 أسفل هذا الكومنت
+  
+  
+  grades.forEach((element) => {
+    all_grades_div.innerHTML += `<div>${element}</div>`;
+   });
+  function search() {  
   let inputValue = document.getElementById("input").value;
+
+
   
   // طبّق الخطوة 7 أسفل هذا الكومنت
   
-}
+let filteredGrades = grades.filter((x) => x == inputValue);
 
+
+console.log(filteredGrades);
+
+}
 // طبّق الخطوة 8 و 9 أسفل هذا الكومنت
+
+let randomIndex=Math.floor(Math.random ()*grades.length);
 
 // طبّق الخطوة 10 أسفل هذا الكومنت
 
-
+random_grade_div.innerHTML = `<div>${grades[randomIndex]}</div>`;
